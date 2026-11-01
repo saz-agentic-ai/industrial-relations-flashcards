@@ -1,0 +1,1141 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Industrial Relations Flashcards</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+/* Layout concept: a law-school reading desk. Topic index on the left, one large card on the stage, a statute-status note under the masthead, and a Teach mode that turns each card into a projectable question and answer panel. */
+:root {
+  --bg: #F3F2F5;
+  --surface: #FFFFFF;
+  --ink: #1B1E2E;
+  --muted: #595E73;
+  --line: #DBD9E1;
+  --accent: #7B1E3A;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #F5E4E9;
+  --back-bg: #1F2A44;
+  --back-fg: #EEF0F7;
+  --back-muted: #AAB3CC;
+  --back-accent: #F0B3C4;
+  --back-line: rgba(255, 255, 255, 0.18);
+  --good: #17703F;
+  --good-ink: #FFFFFF;
+  --warn: #9A5200;
+  --shadow: 0 1px 2px rgba(27, 30, 46, 0.06), 0 14px 32px -16px rgba(27, 30, 46, 0.28);
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141C;
+    --surface: #1B1F2C;
+    --ink: #E9EBF2;
+    --muted: #9EA4B8;
+    --line: #2C3143;
+    --accent: #EE93AC;
+    --accent-ink: #2A0C16;
+    --accent-soft: #3A1F29;
+    --back-bg: #3A1B30;
+    --back-fg: #F8EBF0;
+    --back-muted: #D3A9BA;
+    --back-accent: #F2A0B8;
+    --good: #62CF93;
+    --good-ink: #08210F;
+    --warn: #F0B060;
+    --shadow: 0 14px 32px -16px rgba(0, 0, 0, 0.65);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141C;
+  --surface: #1B1F2C;
+  --ink: #E9EBF2;
+  --muted: #9EA4B8;
+  --line: #2C3143;
+  --accent: #EE93AC;
+  --accent-ink: #2A0C16;
+  --accent-soft: #3A1F29;
+  --back-bg: #3A1B30;
+  --back-fg: #F8EBF0;
+  --back-muted: #D3A9BA;
+  --back-accent: #F2A0B8;
+  --good: #62CF93;
+  --good-ink: #08210F;
+  --warn: #F0B060;
+  --shadow: 0 14px 32px -16px rgba(0, 0, 0, 0.65);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.app {
+  padding-block: 28px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1180px; margin-inline: auto; }
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; margin: 0; }
+
+/* Header */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 22px;
+}
+.brand { min-width: 0; flex: 1 1 360px; display: grid; gap: 6px; }
+h1 { font-size: clamp(1.9rem, 4.6vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; }
+.lede { margin: 0; color: var(--muted); max-width: 58ch; }
+.top-tools { display: grid; gap: 10px; justify-items: end; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 3px; gap: 3px; }
+.seg button {
+  font: 600 0.9rem var(--font-body);
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 1.1rem;
+  min-height: 40px;
+  cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.overall { margin: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.status {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  background: var(--accent-soft);
+  border-radius: 6px;
+  font-size: 0.93rem;
+}
+.status .eyebrow { color: var(--accent); }
+.status p { margin: 0; max-width: 100ch; }
+
+/* Layout */
+.layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding-top: 24px; align-items: start; }
+.topics { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.unit-label { margin: 18px 0 6px; padding-inline: 0.75rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.unit-label:first-child { margin-top: 0; }
+.topic-btn {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+}
+.topic-btn:hover { background: var(--accent-soft); }
+.topic-btn[aria-current="true"] { background: var(--accent-soft); }
+.topic-btn .t { font-weight: 600; font-size: 0.92rem; line-height: 1.3; }
+.topic-btn .m { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.mini { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.mini i { display: block; height: 100%; background: var(--good); }
+
+/* Stage */
+.stage { min-width: 0; display: grid; gap: 18px; align-content: start; }
+.stage:fullscreen { background: var(--bg); padding: 2rem; overflow: auto; }
+.stage-head { display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: flex-end; justify-content: space-between; }
+.stage-head > div { min-width: 0; display: grid; gap: 4px; }
+.stage-head h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.25; }
+.counter { margin: 0; font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.track { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.track i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s ease; }
+
+/* Flip card */
+.scene { perspective: 1600px; }
+.card {
+  display: grid;
+  position: relative;
+  min-height: 340px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+  border-radius: 8px;
+}
+.card.flipped { transform: rotateY(180deg); }
+.face {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  border-radius: 8px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow);
+}
+.front { background: var(--surface); border: 1px solid var(--line); }
+.back { background: var(--back-bg); color: var(--back-fg); transform: rotateY(180deg); --mark: var(--back-accent); }
+.face-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.back .label { color: var(--back-muted); }
+.badge { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid currentColor; }
+.badge.known { color: var(--good); }
+.badge.review { color: var(--warn); }
+.q { flex: 1; display: flex; align-items: center; font-size: clamp(1.4rem, 3.4vw, 2rem); line-height: 1.25; }
+.hint { margin: 0; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+.body { flex: 1; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.ans { margin: 0; font-size: 1.08rem; line-height: 1.55; }
+.pts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; counter-reset: n; }
+.pts li { position: relative; padding-left: 1.2rem; font-size: 0.98rem; overflow-wrap: anywhere; }
+ul.pts li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--mark, var(--accent)); }
+ol.pts li { padding-left: 2rem; counter-increment: n; }
+ol.pts li::before { content: counter(n) "."; position: absolute; left: 0; top: 0.08em; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--mark, var(--accent)); }
+.note { padding-top: 14px; border-top: 1px solid var(--back-line); font-size: 0.92rem; color: var(--back-fg); }
+.note b { display: block; margin-bottom: 2px; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--back-accent); }
+
+/* Teach panel */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); padding: clamp(1.25rem, 4vw, 2.5rem); display: grid; gap: 22px; }
+.t-q { font-size: clamp(1.7rem, 4vw, 2.8rem); line-height: 1.2; }
+.t-a { display: grid; gap: 16px; padding-top: 22px; border-top: 1px solid var(--line); --mark: var(--accent); }
+.t-a .ans { font-size: clamp(1.15rem, 2.2vw, 1.4rem); }
+.t-a .pts li { font-size: clamp(1.02rem, 1.9vw, 1.2rem); }
+.t-note { background: var(--accent-soft); border-radius: 6px; padding: 14px 16px; font-size: 1.02rem; }
+.t-note b { display: block; margin-bottom: 2px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.t-hint { margin: 0; font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+
+/* Summary and empty */
+.done-panel h3 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
+.done-panel p { margin: 0; color: var(--muted); max-width: 52ch; }
+.tally { display: flex; flex-wrap: wrap; gap: 12px; }
+.tally div { flex: 1 1 140px; border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; display: grid; gap: 2px; }
+.tally strong { font-family: var(--font-display); font-size: 2rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tally span { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.tally .k strong { color: var(--good); }
+.tally .r strong { color: var(--warn); }
+
+/* Buttons */
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  font: 600 0.92rem var(--font-body);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-height: 44px;
+  padding: 0.6rem 1.15rem;
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) { border-color: var(--accent); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.good { background: var(--good); border-color: var(--good); color: var(--good-ink); flex: 1 1 160px; }
+.btn.warn { color: var(--warn); border-color: var(--warn); flex: 1 1 160px; }
+.btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.actions .grow { flex: 1 1 140px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 6px; border-top: 1px solid var(--line); }
+.toolbar .btn { min-height: 38px; padding: 0.4rem 0.9rem; font-size: 0.84rem; font-weight: 500; }
+.keys { margin: 0; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+
+.sources { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); display: grid; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+.sources ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
+.sources a { color: var(--accent); }
+.sources p { margin: 0; max-width: 90ch; }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 899px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .topics { flex-direction: row; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
+  .unit-label { display: none; }
+  .topic-btn { flex: 0 0 auto; width: 160px; background: var(--surface); border: 1px solid var(--line); }
+  .top-tools { justify-items: start; }
+  .card { min-height: 300px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .track i { transition: none; }
+}
+</style>
+
+<div class="app">
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <p class="eyebrow">Industrial Relations and Labour Law</p>
+        <h1>Industrial Relations Flashcards</h1>
+        <p class="lede">Trade unions, industrial disputes, how disputes are settled, grievance handling and the new Industrial Relations Code. Study alone, or switch to Teach mode to run it as a class.</p>
+      </div>
+      <div class="top-tools">
+        <div class="seg" role="group" aria-label="Mode">
+          <button type="button" id="modeStudy" aria-pressed="true">Study</button>
+          <button type="button" id="modeTeach" aria-pressed="false">Teach</button>
+        </div>
+        <p class="overall" id="overall"></p>
+      </div>
+    </header>
+
+    <aside class="status" aria-label="Legal status">
+      <p class="eyebrow">Legal status, November 2026</p>
+      <p>The Trade Unions Act, 1926 and the Industrial Disputes Act, 1947 have been replaced by the Industrial Relations Code, 2020, in force from 21 November 2025. Syllabi still teach the Acts, so each topic explains the Act first and flags what the Code changed.</p>
+    </aside>
+
+    <div class="layout">
+      <nav class="topics" id="topics" aria-label="Topics"></nav>
+
+      <main class="stage" id="stage">
+        <div class="stage-head">
+          <div>
+            <p class="eyebrow" id="unitLabel"></p>
+            <h2 id="deckTitle"></h2>
+          </div>
+          <p class="counter" id="counter"></p>
+        </div>
+        <div class="track" id="track" role="progressbar" aria-label="Deck progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="bar"></i></div>
+
+        <section id="studyView" aria-label="Flashcard">
+          <div class="scene">
+            <div class="card" id="card" role="button" tabindex="0" aria-label="Flashcard. Press Space to flip.">
+              <div class="face front" id="faceFront">
+                <div class="face-top"><span class="label">Question</span><span class="badge" id="badge" hidden></span></div>
+                <h3 class="q" id="qText"></h3>
+                <p class="hint">Click the card or press Space to see the answer</p>
+              </div>
+              <div class="face back" id="faceBack" aria-hidden="true">
+                <div class="face-top"><span class="label">Answer</span></div>
+                <div class="body" id="backBody"></div>
+                <div class="note" id="backNote"><b>Think about it</b><span id="backNoteText"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="teachView" class="panel" aria-label="Teaching view" hidden>
+          <p class="eyebrow">Question</p>
+          <h3 class="t-q" id="tQ"></h3>
+          <div class="t-a" id="tA" hidden>
+            <div class="body" id="tBody"></div>
+            <div class="t-note" id="tNote"><b>Ask the class</b><span id="tNoteText"></span></div>
+          </div>
+          <p class="t-hint" id="tHint">Pose the question first. Press Space or the button below to reveal the answer.</p>
+        </section>
+
+        <section id="summaryView" class="panel done-panel" aria-label="Deck summary" hidden>
+          <p class="eyebrow">Topic complete</p>
+          <h3 id="sumTitle"></h3>
+          <div class="tally">
+            <div class="k"><strong id="sumKnown">0</strong><span>Got it</span></div>
+            <div class="r"><strong id="sumReview">0</strong><span>To review</span></div>
+          </div>
+          <p id="sumText"></p>
+          <div class="actions">
+            <button type="button" class="btn primary" id="sumMissed">Review missed cards</button>
+            <button type="button" class="btn" id="sumRestart">Start again</button>
+            <button type="button" class="btn" id="sumNext">Next topic</button>
+          </div>
+        </section>
+
+        <section id="emptyView" class="panel done-panel" aria-label="No cards" hidden>
+          <p class="eyebrow">Nothing to review</p>
+          <h3>No missed cards in this topic</h3>
+          <p>Mark cards as 'Review again' while studying and they will collect here.</p>
+          <div class="actions"><button type="button" class="btn primary" id="emptyBack">Show all cards</button></div>
+        </section>
+
+        <div class="actions" id="actions">
+          <button type="button" class="btn grow" id="prev">&larr; Previous</button>
+          <button type="button" class="btn primary grow" id="flip">Flip card</button>
+          <button type="button" class="btn grow" id="next">Next &rarr;</button>
+        </div>
+        <div class="actions" id="marks">
+          <button type="button" class="btn warn" id="mReview">Review again</button>
+          <button type="button" class="btn good" id="mKnown">Got it</button>
+        </div>
+
+        <div class="toolbar">
+          <button type="button" class="btn" id="shuffleBtn" aria-pressed="false">Shuffle</button>
+          <button type="button" class="btn" id="missedBtn" aria-pressed="false">Missed only</button>
+          <button type="button" class="btn" id="fsBtn">Full screen</button>
+          <button type="button" class="btn" id="resetBtn">Reset progress</button>
+        </div>
+        <p class="keys">Space flips &nbsp;·&nbsp; &larr; &rarr; move &nbsp;·&nbsp; 1 review again &nbsp;·&nbsp; 2 got it</p>
+      </main>
+    </div>
+
+    <footer class="sources">
+      <p class="eyebrow">Sources for the Code and its rules</p>
+      <ul>
+        <li><a href="https://www.taxmann.com/post/blog/analysis-the-industrial-relations-code" target="_blank" rel="noopener">Taxmann: The Industrial Relations Code 2020, key provisions</a></li>
+        <li><a href="https://www.taxmann.com/post/blog/govt-notifies-enforcement-of-industrial-relations-code" target="_blank" rel="noopener">Taxmann: Government notifies 21 November 2025 for enforcement</a></li>
+        <li><a href="https://acuitylaw.co.in/md/faqs/frequently-asked-questions-on-the-industrial-relations-code-2020-and-the-industrial-relations-central-rules-2026/" target="_blank" rel="noopener">Acuity Law: FAQs on the Code and the Central Rules 2026</a></li>
+        <li><a href="https://factohr.com/industrial-relations-code-2020/" target="_blank" rel="noopener">factoHR: What is the Industrial Relations Code, 2020?</a></li>
+      </ul>
+      <p>Cards on the 1926 and 1947 Acts reflect the classic statutory text taught in syllabi. Confirm section numbers and figures against the official text before citing them in an exam answer or legal document. Examples marked 'Example' are illustrations.</p>
+    </footer>
+  </div>
+</div>
+<div class="sr" id="live" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  var c = function (q, a, pts, note, ord) {
+    return { q: q, a: a, pts: pts || [], note: note || "", ord: !!ord };
+  };
+
+  var U1 = "Unit I · Unions and Disputes";
+  var U2 = "Unit II · Settlement Machinery";
+  var U3 = "Unit III · Key Concepts";
+  var U4 = "Unit IV · Grievance Handling";
+  var U5 = "Unit V · Trends";
+
+  var DECKS = [
+    {
+      id: "tu-act", unit: U1, title: "Trade Unions Act, 1926",
+      cards: [
+        c("How does the Act define a trade union?",
+          "Section 2(h): any combination, temporary or permanent, formed mainly to regulate relations between workmen and employers, between workmen and workmen, or between employers and employers, or to impose restrictive conditions on a trade or business.",
+          ["Covers unions of workers and associations of employers", "Includes federations of trade unions", "Temporary groups count, not only permanent bodies"],
+          "Why would the law treat an employers' association as a trade union too?"),
+        c("Why was the Act passed?",
+          "It was India's first law on unions, in force from 1927. Early unions such as the Madras Labour Union (1918) and the AITUC (1920) needed legal recognition and protection from prosecution.",
+          ["Before 1926 strikes and union activity risked conspiracy charges", "Registration gave unions legal status", "The Act regulates unions, but does not force employers to recognise them"],
+          "What would a union lose if it had no legal status?"),
+        c("How is a trade union registered?",
+          "Members apply to the Registrar of Trade Unions with the union's rules. Registration is voluntary, but only registered unions get the Act's rights and immunities.",
+          ["Minimum of seven members to apply", "2001 amendment: for an establishment, at least 10% of workers or 100 workers, whichever is less, subject to a minimum of seven", "The Registrar can cancel registration on stated grounds"],
+          "Why did Parliament add a 10% or 100-worker test in 2001?"),
+        c("What is the legal status of a registered union?",
+          "A registered union is a body corporate with perpetual succession and a common seal.",
+          ["It can hold property", "It can enter contracts", "It can sue and be sued in its own name", "It continues even if members change"],
+          "Who would be sued if a union had no legal personality?"),
+        c("How can a union spend its funds?",
+          "Section 15 lists the objects on which general funds may be spent. A separate political fund is allowed for political purposes under Section 16.",
+          ["Salaries and expenses of office-bearers", "Conducting and defending trade disputes and legal cases", "Benefits to members, such as insurance, education and welfare", "Political fund is kept apart and members may opt out of paying"],
+          "Why must political money be kept separate from the general fund?"),
+        c("What immunities does a registered union have?",
+          "The Act protects office-bearers and members from certain liabilities when acting for a trade dispute.",
+          ["Section 17: no criminal conspiracy charge for an agreement to further a trade dispute, unless it is an agreement to commit an offence", "Section 18: no civil suit merely because the act induced a breach of a contract of employment or interfered with a business", "These immunities cover peaceful union action, not violence or illegal acts"],
+          "Where would you draw the line between a protected strike and an unlawful one?"),
+        c("Who can lead a union? (Outsiders)",
+          "The Act limits outsiders in office to keep control with workers, but it still allows them.",
+          ["Outsiders are office-bearers not employed in the industry", "Generally capped at one-third of posts or five, whichever is less", "Critics say outside leaders, often political, add rivalry; supporters say workers need skilled negotiators"],
+          "Does an outsider leader help or hurt a small union?"),
+        c("What problems did unions in India face?",
+          "Even after the Act, the movement stayed fragmented.",
+          ["Multiplicity of unions in one workplace", "Political affiliation of central union bodies", "Small size and weak funds", "No legal duty for employers to recognise a union"],
+          "How would one big union per workplace change bargaining?"),
+        c("What happened to the Act?",
+          "The Trade Unions Act, 1926 stands repealed. Its core rules on registration, immunities and rights continue in Chapter III of the Industrial Relations Code, 2020, in force from 21 November 2025.",
+          ["Registration still by a Registrar, with a seven-member minimum", "New: a sole negotiating union or negotiating council for bargaining", "The Code also covers disputes and standing orders in one law"],
+          "What is the benefit of having one law instead of three?")
+      ]
+    },
+    {
+      id: "id-act", unit: U1, title: "Industrial Disputes Act, 1947",
+      cards: [
+        c("What was the purpose of the Industrial Disputes Act?",
+          "To investigate and settle industrial disputes, promote harmony between employers and workmen, and give relief in lay-off and retrenchment. It came into force on 1 April 1947.",
+          ["Secure good relations between employers and workmen", "Provide machinery: conciliation, arbitration, adjudication", "Regulate strikes and lockouts", "Protect workmen from unfair labour practices"],
+          "Why did a newly independent India want strong dispute machinery?"),
+        c("Which authorities does the Act create?",
+          "The Act set up a ladder of bodies, from bipartite forums to national adjudication.",
+          ["Works Committee (Section 3)", "Conciliation Officers and Boards of Conciliation", "Courts of Inquiry", "Labour Courts", "Industrial Tribunals", "National Industrial Tribunal"],
+          "Which bodies are advisory, and which can give binding decisions?"),
+        c("Who is a 'workman'?",
+          "Section 2(s): any person employed in an industry to do manual, unskilled, skilled, technical, operational, clerical or supervisory work for hire or reward.",
+          ["Excludes the armed forces, police and prison staff", "Excludes managerial and administrative roles", "Supervisors earning above the wage ceiling (₹10,000 a month) are excluded", "The Code now speaks of 'worker', with a supervisory ceiling of ₹18,000 a month"],
+          "Is a team leader on ₹25,000 a month covered?"),
+        c("What is an 'industry'?",
+          "Section 2(j) covers any business, trade, undertaking, manufacture or calling of employers, and any service or employment of workmen. In the Bangalore Water Supply case (1978), the Supreme Court set a triple test.",
+          ["Systematic activity", "Organised by cooperation between employer and employee", "For producing or distributing goods and services to satisfy human wants", "Profit motive is not required"],
+          "Does a hospital or a university qualify under this test?"),
+        c("What are unfair labour practices?",
+          "Acts by employers or unions that damage fair industrial relations. The Fifth Schedule lists them.",
+          ["Employer: victimising union members, interfering with union formation, refusing to bargain", "Union: coercing workers to join, threatening violence, illegal strikes", "The Code lists them in a Schedule and penalises them"],
+          "Is dismissing a union organiser a fair management choice?"),
+        c("Which services are 'public utility services'?",
+          "Services listed in the First Schedule, such as railways, posts, water, electricity and hospitals, where a stoppage hurts the public. Strike and lockout rules were stricter for them.",
+          ["Notice of strike and lockout was compulsory", "Conciliation was mandatory", "The Code extends strike notice to all industrial establishments"],
+          "Why does the public interest limit the right to strike in hospitals?"),
+        c("What happened to the Act?",
+          "The Industrial Disputes Act, 1947 stands repealed and replaced by the Industrial Relations Code, 2020, in force from 21 November 2025.",
+          ["Labour Courts and Courts of Inquiry are not carried into the Code", "Industrial Tribunals and the National Industrial Tribunal continue", "Lay-off, retrenchment and closure rules move into the Code"],
+          "Why would a Code drop some of the older bodies?")
+      ]
+    },
+    {
+      id: "meaning-causes", unit: U1, title: "Industrial Dispute: Meaning and Causes",
+      cards: [
+        c("What is an industrial dispute?",
+          "Section 2(k): any dispute or difference between employers and employers, employers and workmen, or workmen and workmen, connected with employment, non-employment, terms of employment or conditions of labour of any person.",
+          ["Must be connected with employment or its terms", "Can be collective or, in some cases, individual", "Includes disputes about non-employment, such as refusal to hire or reinstate"],
+          "Is a quarrel between two workers about a personal matter an industrial dispute?"),
+        c("Can an individual's case be an industrial dispute?",
+          "Yes. Section 2A of the Act deems a dispute over the discharge, dismissal, retrenchment or termination of a single workman to be an industrial dispute. The Code keeps this idea.",
+          ["The individual can raise it even without a union backing", "Usually goes to conciliation and then adjudication", "Time limits apply for raising such disputes"],
+          "Why should one dismissed worker get access to dispute machinery?"),
+        c("Who can be parties to a dispute?",
+          "The definition names three pairings.",
+          ["Employer against employer", "Employer against workmen", "Workmen against workmen, such as rival unions"],
+          "Give an example of workmen against workmen."),
+        c("Economic causes",
+          "Money and conditions of work are the most common sources of conflict.",
+          ["Low wages or delayed wages", "Bonus and incentive disputes", "Allowances, overtime and leave", "Hours of work and shifts", "Retrenchment and lay-off"],
+          "Which economic issue produces the most conflict in a factory with rising prices?"),
+        c("Management-related causes",
+          "Management behaviour often turns a disagreement into a dispute.",
+          ["Victimisation and unfair labour practices", "Autocratic style and poor communication", "Arbitrary transfers, promotions or discipline", "Unsafe working conditions", "Refusal to bargain or to recognise a union"],
+          "How can a manager's tone create a dispute without any change in pay?"),
+        c("Union-related causes",
+          "The union side contributes too.",
+          ["Rivalry between unions for members", "Multiplicity of unions", "Political influence on demands", "Leaders using issues to gain support", "Disputes over recognition and representation"],
+          "How could two unions in one plant raise the chance of a strike?"),
+        c("Political and external causes",
+          "Factors outside the workplace also feed disputes.",
+          ["Inflation and cost of living", "National or political campaigns", "Government policy changes, such as new labour laws", "Economic slowdowns and closures"],
+          "Why did nationwide union strikes follow the announcement of the labour codes?"),
+        c("Why do small problems escalate?",
+          "A grievance that is ignored tends to grow into a dispute.",
+          ["No clear way to raise complaints", "Delay in management response", "Lack of trust between sides", "Rumours filling the information gap"],
+          "At which point could a manager have stopped the dispute from forming?")
+      ]
+    },
+    {
+      id: "forms-effects", unit: U1, title: "Forms and Consequences of Disputes",
+      cards: [
+        c("What forms can a dispute take?",
+          "Both sides have weapons, some lawful and some not.",
+          ["Workers: strike, go-slow, work-to-rule, gherao, picketing, boycott, mass absenteeism", "Employers: lockout, lay-off, retrenchment, dismissal, blacklisting", "Law regulates the main ones, strike and lockout"],
+          "Which of these is the mildest, and which is the most aggressive?"),
+        c("Types of strikes",
+          "Strikes differ in scope and style.",
+          ["General strike: workers across many industries or regions", "Sympathetic strike: in support of another group's cause", "Sit-down or stay-in strike: workers stay at their posts but stop work", "Token strike: short, symbolic stoppage", "Hunger strike: fasting to press demands", "Wildcat or flash strike: sudden and unannounced"],
+          "Why is a flash strike hard for management to manage?"),
+        c("Go-slow and work-to-rule",
+          "Both are forms of reduced work without a formal strike.",
+          ["Go-slow: deliberately working below normal pace", "Work-to-rule: following every rule so strictly that output falls", "Courts have treated go-slow as misconduct because wages are paid for full work"],
+          "Is working exactly by the rulebook a form of protest or a form of compliance?"),
+        c("What is gherao?",
+          "From the Hindi word for 'surround'. Workers encircle managers or officials and prevent them from leaving until demands are met.",
+          ["Became common in West Bengal in the 1960s", "Can amount to wrongful restraint or intimidation", "Courts have not treated it as a protected form of protest"],
+          "How is gherao different from a peaceful sit-in outside the office?"),
+        c("Picketing and boycott",
+          "Both aim to pressure the employer without leaving the workplace.",
+          ["Picketing: posting workers at the gate to persuade others not to enter or work; peaceful picketing is lawful", "Boycott: refusing to deal with the employer or his goods", "Violence or blocking of access makes them unlawful"],
+          "Where does persuasion end and obstruction begin?"),
+        c("Employer weapons",
+          "Management also has ways to apply pressure.",
+          ["Lockout: temporarily closing the workplace", "Blacklisting: circulating names of troublemakers among employers", "Victimisation: punishing workers for union activity", "Closure or relocation of a unit"],
+          "Why do workers see blacklisting as unfair?"),
+        c("Consequences for employers",
+          "Disputes carry direct and indirect costs.",
+          ["Lost production and delayed deliveries", "Damage to machinery and stock", "Loss of customers and orders", "Reputation damage and higher labour cost", "Possible shift of investment to other regions"],
+          "What cost of a strike is hardest for a firm to recover?"),
+        c("Consequences for workers",
+          "Workers also pay a price, even when they win.",
+          ["Loss of wages under the 'no work, no pay' principle", "Financial hardship and debt", "Risk of dismissal in illegal strikes", "Strained relations with supervisors", "Possible gains: better pay, safer conditions"],
+          "How long can a worker afford to strike?"),
+        c("Consequences for the economy and society",
+          "Large or repeated disputes spread beyond the workplace.",
+          ["Loss of man-days and output", "Weaker investor confidence", "Public inconvenience when essential services stop", "Spillover to suppliers and local businesses", "Sometimes pressure for needed reform"],
+          "Is a railway strike different from a factory strike in public impact?")
+      ]
+    },
+    {
+      id: "prevent", unit: U2, title: "Preventing Disputes",
+      cards: [
+        c("Why prevention matters",
+          "Preventive machinery tries to stop disputes before they begin. It is cheaper and less damaging than settlement after a stoppage.",
+          ["Bipartite: employer and workers only", "Tripartite: employers, workers and government", "Examples: works committees, collective bargaining, standing orders, grievance procedures"],
+          "What does preventing a dispute cost compared with settling one?"),
+        c("Works Committee",
+          "A bipartite body under Section 3 of the ID Act for establishments with 100 or more workmen. The Code keeps the 100-worker threshold.",
+          ["Equal representation of employer and workmen", "Aim: promote good relations and remove causes of friction", "Discusses welfare, working conditions and amenities", "Not a negotiating body for wages"],
+          "Why do equal numbers matter in such a committee?"),
+        c("Workers' participation in management in India",
+          "India has tried several schemes to share decisions with workers.",
+          ["Works committees (1947)", "Joint Management Councils (1958)", "Scheme of shop councils and joint councils (1975)", "Participation is mostly consultative, not decision-making"],
+          "How much power should workers have over company decisions?"),
+        c("Joint consultation",
+          "Management and workers' representatives meet regularly to discuss matters of common interest. The outcome is advisory, not binding.",
+          ["Builds trust and early warning", "Covers productivity, safety, welfare, working methods", "Works best with open information-sharing"],
+          "What topics would you keep out of joint consultation?"),
+        c("Collective bargaining",
+          "Negotiation between management and union representatives to fix the terms of employment, ending in a written agreement.",
+          ["Prepare demands and data", "Negotiate in good faith", "Reach an agreement or settlement", "Implement and review it", "A settlement under the ID Act binds all workmen of the establishment"],
+          "Why does bargaining need a recognised union?", true),
+        c("Code of Discipline, 1958",
+          "A voluntary code adopted after the 1957 Indian Labour Conference. It set mutual duties for management and unions to avoid unilateral action.",
+          ["Use grievance procedure before any stoppage", "No strike or lockout without notice", "No victimisation", "No coercion or violence", "Voluntary, so moral rather than legal force"],
+          "Why would a voluntary code work, or not work?"),
+        c("Standing orders",
+          "Written rules on conditions of employment, such as shifts, attendance, leave and misconduct, made known to workers.",
+          ["Originally under the Industrial Employment (Standing Orders) Act, 1946", "Reduce arbitrary management action", "Under the Code they apply to establishments with 300 or more workers (earlier 100)"],
+          "Why do clear rules reduce disputes?"),
+        c("Tripartite bodies",
+          "Forums where government, employers and workers shape labour policy together.",
+          ["Indian Labour Conference", "Standing Labour Committee", "Industrial committees for specific industries", "Advise on legislation and disputes"],
+          "Who benefits when government sits at the table too?")
+      ]
+    },
+    {
+      id: "settle", unit: U2, title: "Settling Disputes",
+      cards: [
+        c("The settlement ladder",
+          "When disputes arise, parties usually climb from least to most formal means.",
+          ["Direct negotiation or collective bargaining", "Conciliation by a neutral officer", "Voluntary arbitration by an agreed arbitrator", "Adjudication by a Tribunal"],
+          "At which step does the parties' control end?", true),
+        c("Conciliation",
+          "A neutral third party helps the sides reach agreement without imposing a decision.",
+          ["Conciliation officers are appointed by government", "Mandatory in public utility services under the ID Act", "A signed settlement is binding", "If it fails, the officer reports the failure"],
+          "Why is a mediator without power sometimes effective?"),
+        c("Conciliation officer and Board of Conciliation",
+          "Under the ID Act there were two levels of conciliation.",
+          ["Officer: one person, aims to settle within 14 days", "Board: independent chairman and two or four members representing the sides, report within two months", "The Code keeps conciliation officers and drops Boards"],
+          "Why would a board take longer than an officer?"),
+        c("Voluntary arbitration",
+          "The parties agree in writing to refer the dispute to an arbitrator of their choice, and accept the award.",
+          ["Quick, flexible and often confidential", "Preserves working relationships", "Award is binding once published", "Available under the ID Act and the Code by written agreement"],
+          "Would you trust a third party chosen by both sides?"),
+        c("Adjudication",
+          "A state-appointed body decides the dispute and its decision binds both sides.",
+          ["Labour Court: individual issues such as dismissal (ID Act)", "Industrial Tribunal: wider issues such as wages, bonus, hours, retrenchment", "National Industrial Tribunal: disputes of national importance or affecting several states", "Under the Code, Tribunals are two-member bodies with one judicial and one administrative member"],
+          "Why is a binding decision sometimes better than a negotiated one?"),
+        c("Court of Inquiry",
+          "A temporary body under the ID Act to inquire into any matter connected with a dispute and report to government. The Code does not carry it forward.",
+          ["Reports facts, does not decide", "Used in major disputes", "Report goes to government"],
+          "When is a fact-finding report more useful than a decision?"),
+        c("Settlement vs award",
+          "Two different outcomes of dispute machinery.",
+          ["Settlement: agreed by the parties, often in conciliation or bargaining", "Award: decision of an arbitrator or adjudicator, imposed on the parties", "Both bind the parties for the period stated"],
+          "Which outcome do workers accept more easily?"),
+        c("Compare conciliation, arbitration and adjudication",
+          "They differ in who decides and how binding the result is.",
+          ["Conciliation: neutral helps, parties decide", "Arbitration: chosen arbitrator decides, parties agreed beforehand", "Adjudication: state body decides, no prior consent needed", "Under the Code a party can approach the Tribunal after conciliation fails"],
+          "Pick one method for a wage dispute in a small firm and justify it.")
+      ]
+    },
+    {
+      id: "concepts", unit: U3, title: "Strike, Lockout, Layoff and Retrenchment",
+      cards: [
+        c("Four terms side by side",
+          "They sound alike but differ in who acts and why.",
+          ["Strike: workers stop work together", "Lockout: employer closes the workplace or refuses employment during a dispute", "Lay-off: employer cannot provide work for stated reasons beyond dispute", "Retrenchment: employer permanently ends a worker's service, other than as punishment"],
+          "Which of these is a temporary measure, and which is permanent?"),
+        c("What is a strike?",
+          "A cessation of work by a body of persons employed in an industry, acting together, or a concerted refusal to continue work. The Code adds concerted casual leave on a day by 50% or more of the workers.",
+          ["Action must be collective", "Example: the 1982 Bombay textile strike led by Datta Samant, involving lakhs of mill workers over many months", "Example: a bank union calls a one-day nationwide strike"],
+          "Is 'sick leave' by half of the staff on one day a strike?"),
+        c("When is a strike illegal?",
+          "A strike is illegal when it breaks the statutory restrictions.",
+          ["Without notice", "Within the notice waiting period", "During conciliation and a short period after", "During Tribunal or arbitration proceedings and a period after", "While a settlement or award is in force"],
+          "What should a union leader check before calling a strike?"),
+        c("Strike rules under the Code",
+          "Section 62 extends the notice rule to every industrial establishment.",
+          ["Notice must be given within the 60 days before striking", "No strike within 14 days of giving notice, or before the date in the notice", "The notice lapses if the strike does not begin within 60 days", "No strike during conciliation and 7 days after", "No strike during Tribunal or arbitration proceedings and 60 days after"],
+          "Why do the rules make flash strikes hard?"),
+        c("What is a lockout?",
+          "Temporary closing of a place of employment, suspension of work, or refusal by an employer to continue to employ workers, usually to pressure them.",
+          ["The employer's counterpart to a strike", "Example: Maruti Suzuki's Manesar plant, July 2012, shut for about a month after violence", "Lockouts follow notice rules like strikes under the Code"],
+          "Can an employer use a lockout to win a wage negotiation?"),
+        c("Strike vs lockout",
+          "Both stop production, but they start from opposite sides.",
+          ["Initiated by workers vs employer", "Aim: win demands vs force acceptance", "Workers lose wages in both", "Both are lawful only if rules are followed", "Both are subject to notice rules in the Code"],
+          "Which side bears the heavier cost of a long stoppage?"),
+        c("What is lay-off?",
+          "Failure, refusal or inability of the employer to give work to a worker on the muster roll because of shortage of coal, power or raw materials, accumulation of stock, breakdown of machinery, natural calamity or a similar connected reason.",
+          ["Temporary and not caused by a dispute", "Example: a garment factory idles two shifts because yarn supply fails", "Worker stays on the rolls and is not retrenched"],
+          "How is a lay-off different from a lockout if both leave the plant idle?"),
+        c("Lay-off compensation",
+          "A worker laid off is entitled to compensation, subject to conditions.",
+          ["50% of the total of basic wages and dearness allowance for the lay-off days", "At least one year of continuous service", "Weekly holidays excluded", "Badli and casual workers are excluded", "Generally applies to establishments with 50 or more workers"],
+          "A worker earning ₹600 a day basic plus DA in total is laid off for 10 days. What is the compensation? (₹3,000)"),
+        c("What is retrenchment?",
+          "Termination of a worker's service by the employer for any reason other than punishment by disciplinary action.",
+          ["Excludes voluntary retirement and superannuation", "Excludes non-renewal of a contract on expiry and termination for continued ill health", "The Code also excludes expiry of a fixed-term contract", "Example: a company automates a line and ends 50 jobs"],
+          "Is dismissal for misconduct retrenchment?"),
+        c("Conditions for retrenchment",
+          "The employer must follow conditions before ending a worker's service.",
+          ["One month's written notice with reasons, or wages in lieu", "Compensation of 15 days' average pay for every completed year of service", "Notice to the appropriate government", "'Last come, first go' is the usual principle in a category", "Under the Code, 15 days' wages also go to the worker's re-skilling fund account"],
+          "A worker with 8 completed years and ₹1,000 average daily pay is retrenched. What is the compensation? (₹1,20,000)"),
+        c("Prior permission for lay-off, retrenchment and closure",
+          "Larger establishments need government permission before taking these steps.",
+          ["ID Act: establishments with 100 or more workmen", "Code: raised to 300 or more workers", "Seasonal and intermittent establishments are excluded", "Smaller units do not need permission, but must follow notice and compensation rules"],
+          "Who gains from raising the threshold, and who loses?")
+      ]
+    },
+    {
+      id: "griev-meaning", unit: U4, title: "Grievances: Meaning and Causes",
+      cards: [
+        c("What is a grievance?",
+          "A feeling of dissatisfaction or injustice about something connected with employment, whether or not it is expressed and whether or not it is justified.",
+          ["Michael Jucius stressed that the feeling matters, not just the facts", "It may be real or imagined", "Unspoken grievances still affect morale"],
+          "Should a manager respond to a grievance that seems unreasonable?"),
+        c("Dissatisfaction, complaint and grievance",
+          "Textbooks separate three stages.",
+          ["Dissatisfaction: a feeling, not yet voiced", "Complaint: the feeling is spoken or written", "Grievance: a complaint that is formally lodged and unresolved"],
+          "At which stage is it cheapest to fix the problem?", true),
+        c("Economic causes",
+          "Pay-related issues are the most common.",
+          ["Wage differences between similar jobs", "Late or wrong payment", "Bonus and incentive disputes", "Overtime payment"],
+          "How does pay secrecy cause grievances?"),
+        c("Working environment",
+          "Physical and safety conditions affect daily experience.",
+          ["Poor lighting, heat or noise", "Unsafe machinery or no protective equipment", "Lack of tools, rest breaks or canteen", "Long commutes or hours"],
+          "Which condition would push you to complain first?"),
+        c("Supervision",
+          "Many grievances arise from how a supervisor behaves.",
+          ["Favouritism or discrimination", "Harassment or abusive language", "Poor communication of instructions", "Refusal to listen"],
+          "People are said to leave managers, not companies. What does that say about grievances?"),
+        c("Management policies",
+          "Rules and decisions that seem unfair create grievances.",
+          ["Promotion and seniority disputes", "Arbitrary transfers", "Leave refusals", "Inconsistent discipline", "Unclear performance appraisal"],
+          "How can transparency in promotion reduce grievances?"),
+        c("Group and personal causes",
+          "Relations with colleagues and the union also matter.",
+          ["Conflict with co-workers", "Inter-union rivalry", "Personal problems carried to work", "Poor fit between worker and job"],
+          "Can HR resolve a personal conflict as a workplace grievance?"),
+        c("Signs of unresolved grievances",
+          "Behaviour often signals discontent before anyone files a complaint.",
+          ["Absenteeism and lateness", "Falling quality or output", "More accidents", "Rising attrition", "Insubordination and rumours"],
+          "How would you spot discontent in a team that never complains?"),
+        c("Why handling grievances matters",
+          "Quick and fair handling protects people and the business.",
+          ["Raises morale and trust", "Cuts absenteeism and attrition", "Prevents grievances from becoming disputes", "Gives management early feedback on policy"],
+          "Which cost of ignoring grievances is hardest to see?")
+      ]
+    },
+    {
+      id: "griev-redress", unit: U4, title: "Grievance Handling and Redressal in India",
+      cards: [
+        c("Guidelines for handling a grievance",
+          "Good handling is prompt, fair and recorded.",
+          ["Listen without interrupting", "Treat every grievance seriously", "Collect facts before deciding", "Act promptly and fairly", "Keep written records", "Follow up after the decision", "Respect confidentiality"],
+          "Which guideline do managers most often break?"),
+        c("Steps in handling a grievance",
+          "A supervisor can follow a simple sequence.",
+          ["Receive the grievance and listen", "Define the problem clearly", "Collect facts and data", "Analyse and consider options", "Decide and communicate the answer", "Follow up to check satisfaction"],
+          "Where does bias creep into this sequence?", true),
+        c("Open-door policy",
+          "Any employee may approach any level of management with a concern.",
+          ["Encourages free speech", "Needs managers to be approachable", "Can bypass the supervisor and cause friction", "Works best alongside a formal procedure"],
+          "Would you use an open-door policy if your own manager was the problem?"),
+        c("Model Grievance Procedure (Code of Discipline, 1958)",
+          "A step-by-step procedure in which the grievance moves up if the worker is not satisfied. Timelines are indicative.",
+          ["Worker raises it with the designated officer, who replies within 48 hours", "If unsatisfied, to the head of the department, reply within 3 days", "Then to the Grievance Committee, which recommends within 7 days", "Management decides within 3 days of the recommendation", "Appeal to the head of the organisation", "Final option: voluntary arbitration"],
+          "Why does the procedure set short deadlines?", true),
+        c("Statutory grievance redressal machinery",
+          "The ID Act (Section 9C, added in 2010) and now Section 4 of the Code require a committee in larger establishments.",
+          ["Applies to establishments with 20 or more workers", "Equal numbers of employer and worker representatives", "Up to ten members, with women represented in proportion to their share of the workforce", "Worker applies within one year of the cause of action"],
+          "Why equal representation, and why women's representation too?"),
+        c("What if the grievance is not resolved?",
+          "An unresolved grievance can grow into an industrial dispute.",
+          ["Raise it with the conciliation officer", "If conciliation fails, approach the Industrial Tribunal", "Parties may also agree to voluntary arbitration", "Union may espouse the cause for collective issues"],
+          "At which stage should HR step in?"),
+        c("Who does what in grievance handling?",
+          "Clear roles speed up resolution.",
+          ["Supervisor: first point of contact", "HR: policy, records, analysis, fairness check", "Union: representation and support", "Senior management: final decision and appeals"],
+          "What is HR's role if both supervisor and worker are wrong?"),
+        c("How can grievances be detected early?",
+          "Do not wait for formal complaints.",
+          ["Exit interviews", "Grievance or suggestion boxes", "Attitude and engagement surveys", "Open-door sessions", "Observation of absenteeism and attrition data"],
+          "Which tool would you trust most to show hidden problems?")
+      ]
+    },
+    {
+      id: "codes", unit: U5, title: "Trends: Labour Codes and the IR Code",
+      cards: [
+        c("The four labour codes",
+          "India has merged 29 central labour laws into four codes.",
+          ["Code on Wages, 2019", "Industrial Relations Code, 2020", "Code on Social Security, 2020", "Occupational Safety, Health and Working Conditions Code, 2020", "Brought into force from 21 November 2025"],
+          "Why combine many laws into four?"),
+        c("What does the Industrial Relations Code replace?",
+          "Three older laws.",
+          ["Trade Unions Act, 1926", "Industrial Disputes Act, 1947", "Industrial Employment (Standing Orders) Act, 1946", "Central Rules in force from 8 May 2026; states are framing their own rules"],
+          "Which of the three do you think was most outdated?"),
+        c("Higher thresholds",
+          "Several limits moved up from 100 to 300 workers.",
+          ["Prior government permission for lay-off, retrenchment and closure: 300 or more workers", "Standing orders: 300 or more workers", "Grievance redressal committee: 20 or more workers", "Works committee: 100 or more workers"],
+          "Who benefits from a higher threshold, and who is left less protected?"),
+        c("Strikes under the Code",
+          "The Code tightens the rules on strikes.",
+          ["Notice applies to every industrial establishment, not only public utilities", "Concerted casual leave by 50% or more of the workers counts as a strike", "Strike barred during conciliation and Tribunal proceedings and for set periods after", "Penalties for illegal strikes and for funding them"],
+          "Do these rules protect industrial peace or weaken the right to strike?"),
+        c("Negotiating union and council",
+          "The Code gives a method for deciding who bargains for workers.",
+          ["One registered union: it is the sole negotiating union", "Several unions: one with 51% or more of workers on the muster roll becomes the sole negotiating union", "No union reaches 51%: a negotiating council made up of unions with at least 20% support, in proportion to their strength"],
+          "How does this address the problem of many rival unions?"),
+        c("Fixed-term employment",
+          "Workers can be hired on a written contract for a fixed period.",
+          ["Wages and benefits equal to permanent workers doing similar work", "Gratuity eligibility after one year of service", "Expiry of the contract is not retrenchment, so no retrenchment compensation", "Critics fear it weakens job security"],
+          "Is fixed-term hiring flexibility or insecurity?"),
+        c("Worker re-skilling fund",
+          "The Code adds a new benefit for retrenched workers.",
+          ["Employer contributes 15 days' last-drawn wages for each retrenched worker", "Amount is credited to the worker's account within 45 days", "It is in addition to retrenchment compensation", "Meant to fund retraining for new work"],
+          "Is retraining money a good substitute for job protection?"),
+        c("Tribunals and dispute resolution under the Code",
+          "The structure is simpler than under the ID Act.",
+          ["Conciliation first, led by conciliation officers", "If conciliation fails, parties can go directly to a Tribunal", "Industrial Tribunal has two members, judicial and administrative", "National Industrial Tribunal for disputes of national importance", "Voluntary arbitration by written agreement"],
+          "Is it better to have fewer bodies or more specialised ones?"),
+        c("Penalties for illegal strikes and lockouts",
+          "The Code sets fines and, in some cases, jail terms.",
+          ["Worker in an illegal strike: ₹1,000 to ₹10,000, or up to one month in jail, or both", "Employer in an illegal lockout: ₹50,000 to ₹1,00,000, or up to one month in jail, or both", "Unfair labour practices: ₹10,000 to ₹2,00,000 for a first offence", "Some offences can be compounded by paying part of the maximum fine"],
+          "Are the penalties balanced between workers and employers?"),
+        c("The debate on the Code",
+          "Supporters and critics of the reform disagree sharply.",
+          ["Supporters: simpler compliance, flexibility in hiring, easier for firms to grow and create jobs", "Critics, including central trade unions: weaker protection against dismissal and a harder path to a lawful strike", "Evidence on the long-run impact on jobs and wages is still being gathered"],
+          "Which side's argument do you find stronger, and what evidence would change your mind?")
+      ]
+    }
+  ];
+
+  DECKS.forEach(function (d) {
+    d.cards.forEach(function (card, i) { card.id = d.id + "-" + i; });
+  });
+  var ALL = {
+    id: "all", unit: "All units", title: "All topics",
+    cards: DECKS.reduce(function (acc, d) { return acc.concat(d.cards); }, [])
+  };
+  var TOTAL = ALL.cards.length;
+
+  var KEY = "ir-flashcards-v1";
+  var store = { progress: {}, mode: "study" };
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      if (parsed && parsed.progress) { store.progress = parsed.progress; store.mode = parsed.mode === "teach" ? "teach" : "study"; }
+    }
+  } catch (e) {}
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+
+  var state = { deckId: DECKS[0].id, idx: 0, flipped: false, shuffle: false, missedOnly: false, order: [], busy: false };
+  var resetArmed = false, resetTimer = null;
+
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function deckById(id) { return id === "all" ? ALL : DECKS.filter(function (d) { return d.id === id; })[0]; }
+  function reducedMotion() { return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+
+  function shuffleArr(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function buildOrder() {
+    var list = deckById(state.deckId).cards.slice();
+    if (state.missedOnly) list = list.filter(function (c) { return store.progress[c.id] === "review"; });
+    if (state.shuffle) shuffleArr(list);
+    state.order = list;
+    state.idx = 0;
+    state.flipped = false;
+  }
+
+  function countKnown(cards) {
+    return cards.filter(function (c) { return store.progress[c.id] === "known"; }).length;
+  }
+
+  function renderNav() {
+    var nav = $("topics");
+    nav.replaceChildren();
+    var lastUnit = null;
+    var entries = [{ id: "all", unit: "Overview", title: "All topics", cards: ALL.cards }].concat(DECKS);
+    entries.forEach(function (d) {
+      if (d.unit !== lastUnit) {
+        nav.appendChild(el("p", "unit-label", d.unit));
+        lastUnit = d.unit;
+      }
+      var b = el("button", "topic-btn");
+      b.type = "button";
+      b.setAttribute("aria-current", d.id === state.deckId ? "true" : "false");
+      var known = countKnown(d.cards), n = d.cards.length;
+      b.appendChild(el("span", "t", d.title));
+      var m = el("span", "m");
+      m.appendChild(el("span", null, known + " / " + n + " known"));
+      b.appendChild(m);
+      var mini = el("span", "mini");
+      var fill = el("i");
+      fill.style.width = Math.round(known / n * 100) + "%";
+      mini.appendChild(fill);
+      b.appendChild(mini);
+      b.addEventListener("click", function () { selectDeck(d.id); });
+      nav.appendChild(b);
+    });
+  }
+
+  function fillBody(container, card) {
+    container.replaceChildren();
+    container.appendChild(el("p", "ans", card.a));
+    if (card.pts.length) {
+      var list = el(card.ord ? "ol" : "ul", "pts");
+      card.pts.forEach(function (p) { list.appendChild(el("li", null, p)); });
+      container.appendChild(list);
+    }
+  }
+
+  function render() {
+    var deck = deckById(state.deckId);
+    var n = state.order.length;
+    var teach = store.mode === "teach";
+    var done = n > 0 && state.idx >= n;
+    var empty = n === 0;
+
+    $("unitLabel").textContent = deck.unit;
+    $("deckTitle").textContent = deck.title;
+    var counter = empty ? "0 cards" : done ? "Complete" : "Card " + (state.idx + 1) + " of " + n;
+    $("counter").textContent = counter;
+    $("live").textContent = counter;
+    var pct = empty ? 0 : Math.round((done ? n : state.idx) / n * 100);
+    $("bar").style.width = pct + "%";
+    $("track").setAttribute("aria-valuenow", String(pct));
+
+    $("studyView").hidden = teach || done || empty;
+    $("teachView").hidden = !teach || done || empty;
+    $("summaryView").hidden = !done;
+    $("emptyView").hidden = !empty;
+    $("actions").hidden = done || empty;
+    $("marks").hidden = teach || done || empty;
+
+    $("modeStudy").setAttribute("aria-pressed", String(!teach));
+    $("modeTeach").setAttribute("aria-pressed", String(teach));
+
+    var missedCount = deck.cards.filter(function (c) { return store.progress[c.id] === "review"; }).length;
+    $("missedBtn").textContent = "Missed only (" + missedCount + ")";
+    $("missedBtn").setAttribute("aria-pressed", String(state.missedOnly));
+    $("missedBtn").disabled = !state.missedOnly && missedCount === 0;
+    $("shuffleBtn").setAttribute("aria-pressed", String(state.shuffle));
+    $("overall").textContent = countKnown(ALL.cards) + " of " + TOTAL + " cards known";
+
+    if (done) {
+      var known = countKnown(state.order);
+      var review = state.order.filter(function (c) { return store.progress[c.id] === "review"; }).length;
+      var skipped = n - known - review;
+      $("sumTitle").textContent = deck.title;
+      $("sumKnown").textContent = String(known);
+      $("sumReview").textContent = String(review);
+      $("sumText").textContent = review > 0
+        ? "Go back over the " + review + " card" + (review === 1 ? "" : "s") + " you flagged, then try the topic again from the start."
+        : skipped > 0
+          ? skipped + " card" + (skipped === 1 ? " was" : "s were") + " not marked. Start again to finish them."
+          : "Every card in this set is marked as known. Move on to the next topic.";
+      $("sumMissed").disabled = review === 0 || state.missedOnly;
+      $("sumNext").hidden = state.deckId === "all";
+    }
+
+    if (!done && !empty) {
+      var card = state.order[state.idx];
+      var status = store.progress[card.id];
+      $("prev").disabled = state.idx === 0;
+      $("next").disabled = teach && state.idx === n - 1;
+      $("next").innerHTML = (!teach && state.idx === n - 1) ? "Finish" : "Next &rarr;";
+
+      if (!teach) {
+        $("qText").textContent = card.q;
+        fillBody($("backBody"), card);
+        $("backNote").hidden = !card.note;
+        $("backNoteText").textContent = card.note;
+        var badge = $("badge");
+        badge.hidden = !status;
+        badge.className = "badge " + (status || "");
+        badge.textContent = status === "known" ? "Got it" : "To review";
+        $("card").classList.toggle("flipped", state.flipped);
+        $("faceFront").setAttribute("aria-hidden", String(state.flipped));
+        $("faceBack").setAttribute("aria-hidden", String(!state.flipped));
+        $("flip").textContent = state.flipped ? "Show question" : "Flip card";
+      } else {
+        $("tQ").textContent = card.q;
+        fillBody($("tBody"), card);
+        $("tNote").hidden = !card.note;
+        $("tNoteText").textContent = card.note;
+        $("tA").hidden = !state.flipped;
+        $("tHint").hidden = state.flipped;
+        $("flip").textContent = state.flipped ? "Hide answer" : "Reveal answer";
+      }
+    }
+  }
+
+  function selectDeck(id) {
+    state.deckId = id;
+    state.missedOnly = false;
+    buildOrder();
+    renderNav();
+    render();
+  }
+
+  function navTo(newIdx) {
+    if (state.busy) return;
+    var teach = store.mode === "teach";
+    if (state.flipped && !teach && !reducedMotion() && newIdx < state.order.length) {
+      state.busy = true;
+      state.flipped = false;
+      $("card").classList.remove("flipped");
+      setTimeout(function () { state.idx = newIdx; state.busy = false; render(); }, 300);
+    } else {
+      state.flipped = false;
+      state.idx = newIdx;
+      render();
+    }
+  }
+
+  function step(d) {
+    var n = state.order.length;
+    if (n === 0) return;
+    var teach = store.mode === "teach";
+    if (state.idx >= n) { if (d < 0) navTo(n - 1); return; }
+    if (d > 0) {
+      if (state.idx === n - 1) { if (!teach) navTo(n); }
+      else navTo(state.idx + 1);
+    } else if (state.idx > 0) {
+      navTo(state.idx - 1);
+    }
+  }
+
+  function toggleFlip() {
+    if (state.busy) return;
+    if (state.order.length === 0 || state.idx >= state.order.length) return;
+    state.flipped = !state.flipped;
+    render();
+  }
+
+  function mark(v) {
+    if (store.mode === "teach") return;
+    if (state.order.length === 0 || state.idx >= state.order.length) return;
+    var card = state.order[state.idx];
+    store.progress[card.id] = v;
+    save();
+    renderNav();
+    navTo(state.idx + 1);
+  }
+
+  function setMode(m) {
+    store.mode = m;
+    state.flipped = false;
+    save();
+    render();
+  }
+
+  $("modeStudy").addEventListener("click", function () { setMode("study"); });
+  $("modeTeach").addEventListener("click", function () { setMode("teach"); });
+  $("card").addEventListener("click", toggleFlip);
+  $("flip").addEventListener("click", toggleFlip);
+  $("prev").addEventListener("click", function () { step(-1); });
+  $("next").addEventListener("click", function () { step(1); });
+  $("mKnown").addEventListener("click", function () { mark("known"); });
+  $("mReview").addEventListener("click", function () { mark("review"); });
+
+  $("shuffleBtn").addEventListener("click", function () {
+    state.shuffle = !state.shuffle;
+    buildOrder();
+    render();
+  });
+  $("missedBtn").addEventListener("click", function () {
+    state.missedOnly = !state.missedOnly;
+    buildOrder();
+    render();
+  });
+  $("emptyBack").addEventListener("click", function () {
+    state.missedOnly = false;
+    buildOrder();
+    render();
+  });
+  $("sumMissed").addEventListener("click", function () {
+    state.missedOnly = true;
+    buildOrder();
+    render();
+  });
+  $("sumRestart").addEventListener("click", function () {
+    buildOrder();
+    render();
+  });
+  $("sumNext").addEventListener("click", function () {
+    var i = DECKS.map(function (d) { return d.id; }).indexOf(state.deckId);
+    selectDeck(DECKS[(i + 1) % DECKS.length].id);
+  });
+
+  var fsBtn = $("fsBtn");
+  if (!document.fullscreenEnabled) {
+    fsBtn.hidden = true;
+  } else {
+    fsBtn.addEventListener("click", function () {
+      try {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          var p = $("stage").requestFullscreen();
+          if (p && p.catch) p.catch(function () {});
+        }
+      } catch (e) {}
+    });
+    document.addEventListener("fullscreenchange", function () {
+      fsBtn.textContent = document.fullscreenElement ? "Exit full screen" : "Full screen";
+    });
+  }
+
+  $("resetBtn").addEventListener("click", function () {
+    var b = $("resetBtn");
+    if (!resetArmed) {
+      resetArmed = true;
+      b.textContent = "Click again to clear";
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(function () { resetArmed = false; b.textContent = "Reset progress"; }, 4000);
+      return;
+    }
+    clearTimeout(resetTimer);
+    resetArmed = false;
+    b.textContent = "Reset progress";
+    store.progress = {};
+    save();
+    state.missedOnly = false;
+    buildOrder();
+    renderNav();
+    render();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = e.target && e.target.tagName;
+    if (e.key === "ArrowRight") { e.preventDefault(); step(1); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); }
+    else if (e.key === " " || e.key === "Enter") {
+      if (tag === "BUTTON" || tag === "A") return;
+      e.preventDefault();
+      toggleFlip();
+    }
+    else if (e.key === "1") { mark("review"); }
+    else if (e.key === "2") { mark("known"); }
+  });
+
+  buildOrder();
+  renderNav();
+  render();
+})();
+</script>
+
+</body></html>
